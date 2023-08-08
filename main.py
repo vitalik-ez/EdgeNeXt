@@ -233,6 +233,8 @@ def main(args):
 
     num_tasks = utils.get_world_size()
     global_rank = utils.get_rank()
+
+    args.multi_scale_sampler = False
     if args.multi_scale_sampler:
         sampler_train = MultiScaleSamplerDDP(base_im_w=args.input_size, base_im_h=args.input_size,
                                              base_batch_size=args.batch_size, n_data_samples=len(dataset_train),

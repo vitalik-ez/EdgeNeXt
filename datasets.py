@@ -8,6 +8,7 @@ from sampler import MultiScaleImageFolder
 
 
 def build_dataset(is_train, args):
+    print('is_train', is_train)
     transform = build_transform(is_train, args)
 
     print("Transform = ")
